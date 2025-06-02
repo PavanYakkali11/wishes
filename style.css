@@ -151,7 +151,7 @@ fieldset {
 	);
 	background: #a00;
 	transform: scale(0);
-	animation: 30s pop 0.5s linear forwards;
+	animation: 10s pop 10s ease  infinite;
 
 	&:after {
 		content: "";
@@ -212,20 +212,31 @@ fieldset {
 }
 
 .heart--top-left {
-	left: -25%;
+	left: -10%;
 	top: -2%;
 	rotate: -7deg;
 	z-index: 2;
-	--scale: 4.6;
+	--scale: 5.6;
 	animation-delay: 0.1s;
 }
 
+
+.heart--top-right-two {
+	left: 99%;
+	top: 40%;
+	rotate: -7deg;
+	z-index: 2;
+	--scale: 5.6;
+	animation-delay: 0.1s;
+}
+
+
 .heart--top-center {
-	left: 64%;
+	left: 4%;
 	top: -5%;
 	rotate: -42deg;
 	z-index: -1;
-	--scale: 4.6;
+	--scale: 8.6;
 	animation-delay: 0.2s;
 }
 
@@ -248,8 +259,8 @@ fieldset {
 }
 
 .heart--bottom-center {
-	--scale: 4.2;
-	left: 38%;
+	--scale: 8;
+	left: 47%;
 	top: 101%;
 	rotate: 40deg;
 	animation-delay: 0.3s;
@@ -285,15 +296,13 @@ body:has(#orange:checked) .heart:after {
 }
 
 @keyframes pop {
-	0 {
+	0% {
 		transform: scale(0);
 	}
-	1% {
+	10% {
 		transform: scale(var(--scale));
 	}
-	2%,
-	34%,
-	64%,
+	
 	100% {
 		transform: scale(var(--scale)) translate(0, 0);
 	}
